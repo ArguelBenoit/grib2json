@@ -8,7 +8,7 @@ WORKDIR /usr/grib2json
 RUN apt-get update -y
 RUN apt-get install maven -y
 RUN mvn package
-RUN mkdir ../build
+RUN mkdir /usr/build
 RUN tar zxvf target/grib2json-0.8.0-SNAPSHOT.tar.gz -C /usr/build/
-RUN cd ../build/grib2json-0.8.0-SNAPSHOT/bin
-RUN bash grib2json
+RUN cd /usr/build/grib2json-0.8.0-SNAPSHOT/bin
+# RUN sh grib2json trololo  
